@@ -1,8 +1,11 @@
+use pollster::block_on;
+
 mod error;
 mod gui;
+mod state;
 
 fn main() {
-    match gui::run() {
+    match block_on(gui::run()) {
         _ => {}
     }
 }
