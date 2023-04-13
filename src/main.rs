@@ -1,3 +1,8 @@
+mod error;
+mod gui;
+
 fn main() {
-    println!("Hello, world!");
+    match gui::run() {
+        _ => {}
+    }
 }
